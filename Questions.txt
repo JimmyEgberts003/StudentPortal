@@ -1,0 +1,10 @@
+1) The application starts by triggering its onCreate method, then it's onStart method and finally its onResume method.
+When navigating to NextActivity the MainActivity triggers the toNextActivity method then the onPause method.
+After that, the NextActivity triggers its onCreate, onStart and onResume methods. After that the MainActivity triggers its onStop method.
+If you return, NextActivity triggers onPause, then the MainActivity triggers its onRestart, its onStart and finally its onResume.
+Finally the methods onStop and onDestroy are triggered.
+2) Implicit intents don't specifiy a specific component, which means that the system has enough content to figure it out itself what should be run.
+Explicit intents have a specified component, which means that what it triggers is predefined.
+3) The way Serializables is implemented is slower than Parcelables. This is due to the fact that developers can use Parcelables to write custom code for marshalling and unmarshalling which causes less garvage to heap.
+The Android SDK also contains lots of documentation for Parcelables, while not as much for Serializables.
+4) The analyzer reads through your code to see if it contains any potential bugs or code improvements.
